@@ -14,7 +14,7 @@ for _ in range(m):
     a,b= map(int,input().split())
     graph[a].append(b) 
 
-distance    = [-1] * (n+1) # 모든 도시에 대한 최단 거리 초기화 #얘가 왜있는건지..
+distance    = [-1] * (n+1) # 모든 도시에 대한 최단 거리 초기화
 distance[x] = 0 # 출발 도시까지 거리는 0 
 
 #BFS
