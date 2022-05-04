@@ -8,7 +8,7 @@ lst = []
 for i in range(n):
     # lst.append(tuple(map(str,input().split()))) # 첨엔 이렇게 한번에 튜플로 묶었는데
     # 이렇게 말고 점수는 int로 받아야 함
-    input_data = input().split() # ["길동","95"] 이렇게 리스트로 묶임
+    input_data = input().split() # ["길동","95"] : map object
     lst.append((input_data[0], int(input_data[1]))) # 점수 int로 변환
 
 # def setting(data):
