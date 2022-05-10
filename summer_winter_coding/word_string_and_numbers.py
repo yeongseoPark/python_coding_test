@@ -17,6 +17,6 @@ lst = ["zero","one","two","three","four","five","six","seven","eight","nine"]
 def solution(s):
     for i in lst:
         s = s.replace(i,str(dic[i])) #s= 으로 지정해줘야함
-    return s
+    return int(s)
 
 print(solution("one4seveneight"))
