@@ -11,7 +11,7 @@ def dfs(x,y):
     dy = [0,0,-1,1]
 
     if graph[x][y] == 1:
-        cnt += 1
+        cnt += 1 
         visited[x][y] = True
 
         for i in range(4):
