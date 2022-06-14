@@ -2,10 +2,10 @@
 def solution(phone_book): # 답보고 품
     hash_map = {phone_number: 1 for phone_number in phone_book} # 각 전화번호:1 인 해시맵 만듬
 
-    for phone_number in phone_book: # 전화번호부에 있는 모든 전화번호 loop
+    for phone_number in phone_book: # 전화번호부에 있는 모든 전화번호 loop [ 0107415, 010]
         jubdoo = ""                 # jubdoo라는 문자열 만들고 
-        for num in phone_number:    # 전화번호 한자리씩 jubdoo에 더해준다
-            jubdoo += num
+        for num in phone_number:    # 전화번호 한자리씩 jubdoo에 더해준다 
+            jubdoo += num     
 
             if jubdoo in hash_map and jubdoo != phone_number: # 위 과정중에 만약 jubdoo가 해시맵의 key들 중하나(다른 전화번호)이고,
                 # 그게 지금 loop도는 번호가 아니라면, 현 전화번호에 접두어가 되는 다른 번호가 존재하는 것이므로
