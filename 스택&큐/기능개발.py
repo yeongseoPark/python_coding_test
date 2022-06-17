@@ -5,7 +5,7 @@ def solution(progresses, speeds): # 큐 사용
         for i in range(len(progresses)): # progresses길이 = speeds 길이 
             progresses[i] += speeds[i] # 계속 개발속도만큼 더해나감
 
-        cnt = 0  
+        cnt = 0  # 배포한 개수
         while progresses and progresses[0] >= 100: # 큐의 앞에서부터 100넘으면
             # 그런데 만약 앞에서부터 뒤까지 다 100넘은 경우 있을 수 있으므로 while progresses 조건 걸어줌
             # 아니면 index out of range

@@ -3,12 +3,12 @@ def solution(bridge_length, weight, truck_weights): # 답 보고 품
     answer = 0
     bridge = [0] * bridge_length
 
-    while bridge:
+    while bridge: 
         answer += 1
         bridge.pop(0) # 마지막 대기 트럭까지 다리에 투입되는 순간 bridge 길이 하나씩 줄어든다 
 
         if truck_weights: # 트럭 대기줄 있는 동안 if문 수행
-            if sum(bridge) + truck_weights[0] <= weight:
+            if sum(bridge) + truck_weights[0] <= weight:  
                 bridge.append(truck_weights.pop(0))
             else:
                 bridge.append(0) # 트럭 대기줄 있는 동안은 위의 pop과 밑의 append들로 길이가 유지 됨
