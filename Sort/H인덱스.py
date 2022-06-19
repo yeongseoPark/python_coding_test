@@ -11,10 +11,12 @@
 def solution(citations):
     citations.sort(reverse=True)
     for i in range(max(citations),-1,-1): # 인용횟수 가장 많은 것~ 0
+        # 500~1000 / 0~500 이분탐색 으로 확인하면 시간복잡도 줄어들것
         cnt = 0
         for j in citations:
             if j>= i:
                 cnt += 1
         if cnt >= i:
             return i # 만약에 h인덱스 조건 통과하면 바로 리턴하고 끝냄
-    
+
+solution([3,6,0,1,5])
