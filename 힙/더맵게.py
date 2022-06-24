@@ -1,8 +1,5 @@
 import heapq
 
-
-import heapq
-
 def solution(scoville, K): # 효율성 시간초과
     
     heapq.heapify(scoville)

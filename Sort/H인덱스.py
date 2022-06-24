@@ -11,7 +11,6 @@
 def solution(citations):
     citations.sort(reverse=True)
     for i in range(max(citations),-1,-1): # 인용횟수 가장 많은 것~ 0
-        # 500~1000 / 0~500 이분탐색 으로 확인하면 시간복잡도 줄어들것
         cnt = 0
         for j in citations:
             if j>= i:
