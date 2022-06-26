@@ -12,9 +12,6 @@
 #     # 첫번째 인덱스가 동일하다면 다음 인덱스로비교 ~
 #     strl = int("".join(numbers))
 #     return str(strl)
-
-
-
 # print(solution([3, 30, 34, 5, 9]))
 
 def solution(numbers):
