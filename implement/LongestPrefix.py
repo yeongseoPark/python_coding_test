@@ -6,10 +6,7 @@ class Solution(object):
         if len(strs) == 1:
             return strs[0]
 
-        strs.sort(key=len)
-
-        print(strs)
-        minlen = len(strs[0])
+        minlen = len(min(strs,key=len))
 
         if minlen == 0:
             return ""
