@@ -26,12 +26,8 @@ class Solution(object):
             else:
                 stack2.append(i)
 
-        print(stack)
-        print(stack2)
         
         if stack == stack2:
             return True
         else:
             return False
-
-print(Solution().backspaceCompare("a##c","#a#c"))
