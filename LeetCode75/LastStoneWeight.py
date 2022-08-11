@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/last-stone-weight/submissions/
 class Solution(object): 
     def lastStoneWeight(self, stones): #O(n^2)
         """
