@@ -10,9 +10,9 @@ for _ in range(int(input())):
     for i in range(n):
         nodes.append(list(map(int, input().split())))
     nodes.append(list(map(int, input().split())))
-    
+   
     graph = [[] for _ in range(len(nodes))] # 0은 집, 마지막은 락페스티벌
-    
+           
     # 편의점이 100개라 n^2으로 모든 가능성 다 따져봐도 10만밖에 안됨
     for i in range(len(nodes)):
         for j in range(len(nodes)):
