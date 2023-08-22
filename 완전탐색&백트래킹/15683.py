@@ -42,23 +42,23 @@ def fill(b, mode, r, c): # 감시
             elif b[nr][nc] == 0:
                 b[nr][nc] = -1
 
+
 def dfs(depth, b):
     global min_val
     # cctv 전체를 탐색 완료
     if depth == len(cctv):
         count = 0
-        for i in b:
-            count += i.count(0)
-        min_val = min(min_val, count)
-        return
-    
-    temp = copy.deepcopy(b)
-    cctv_num, r, c = cctv[depth]
-    for i in mode[cctv_num]:
-        fill(temp, i, r,c)
-        dfs(depth+1, temp)
-        temp = copy.deepcopy(b)
+        for i in range(n):
+            count += b[i].count(0) # 사각지대 찾기
+        min_val = min(min_val, count) # 찾은 사각지대 바탕으로 최소값 업데이트
+        return 
 
+    temp = copy.deepcopy(b) # 보드를 복제 
+    cctv_num, r, c = cctv[depth] # 탐색할  cctv
+    for i in mode[cctv_num]: # cctv의 종류에 따른 방향에 따라서
+        fill(temp, i , r, c) # 감시
+        dfs(depth + 1, temp) # 다음 cctv 감시 
+        temp = copy.deepcopy(b) # 다 끝났으면 보드 초기화
 min_val = int(1e9)
 dfs(0, b)
 print(min_val)
