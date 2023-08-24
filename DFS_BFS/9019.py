@@ -1,24 +1,11 @@
 from collections import deque
 
-def parse(num):
-    arr = deque()
-    tmp = num
-    
-    progress = 0
-    while tmp > 0:
-        arr.appendleft(tmp % 10)
-        tmp = tmp // 10
-        progress += 1
-    
-    if progress < 4:
-        for i in range(4-progress):
-            arr.appendleft(0)
-    
-    return arr
+
 
 def D(num):
     ans = (num * 2) % 10000
     return ans
+
 def S(num):
     if num == 0:
         return 9999
@@ -26,27 +13,12 @@ def S(num):
     return num - 1
     
 def L(num):
-    parsed = parse(num)
-    first = parsed.popleft()
-    parsed.append(first)
-    
-    ans = 0
-    for i in range(4):
-        ans += parsed[i] * (10 ** (3-i))
-    
-    return ans
+    return (num % 1000) * 10  + num // 1000
     
 
 def R(num):
-    parsed = parse(num)
-    last = parsed.pop()
-    parsed.appendleft(last)
+    return (num % 10) * 1000 + num // 10
     
-    ans = 0
-    for i in range(4):
-        ans += parsed[i] * (10 ** (3-i))
-    
-    return ans
 
 
 def bfs(start, end):
